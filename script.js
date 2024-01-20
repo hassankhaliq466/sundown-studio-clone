@@ -4,6 +4,16 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+var mySwiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
 
 let intro = document.querySelector('.intro')
 let introh1 = document.querySelector('.intro h1')
@@ -64,19 +74,30 @@ elem.forEach(element => {
 });
 
 
-let selectedH1 = null;
+let swipers = document.querySelector('.swiper')
+let curser = document.querySelector('.curser')
 
-function changeBackgroundColor(clickedH1) {
-    // Reset background color for the previously clicked h1
-    if (selectedH1 !== null) {
-        selectedH1.style.color = `rgba(255, 255, 255, 0.3)`
-        selectedH1.querySelector('span').style.backgroundColor = `rgba(255, 255, 255, 0.204)`;
-    }
+swipers.addEventListener('mouseenter',function(){
+    gsap.to(curser,{
+        opacity: 1,
+        scale: 1
+    })
+})
 
-    // Set background color for the clicked h1
-    clickedH1.querySelector('span').style.backgroundColor = '#FE330A';
-    clickedH1.style.color = 'white'
+swipers.addEventListener('mouseleave',function(){
+    gsap.to(curser,{
+        opacity: 0,
+        scale: 0
+    })
+})
 
-    // Update the selectedH1 variable
-    selectedH1 = clickedH1;
-}
+swipers.addEventListener('mousemove',function(e){
+    gsap.to(curser,{
+        x: e.pageX - mySwiper.translate - 50,
+        y: e.pageY - 420,
+        duration: 0.3,
+        ease: 'power2.out',
+    })
+})
+
+console.log('hello');

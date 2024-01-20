@@ -15,7 +15,10 @@ html, body{
     font-family: 'neu';
 }
 
-
+.main{
+    position: relative;
+    z-index: 10;
+}
 
 .intro{
     z-index: 99;
@@ -30,7 +33,6 @@ html, body{
     justify-content: center;
     transition: all ease 0.5s;
     font-size: 30px;
-    
 }
 .intro h1{
     background: -webkit-linear-gradient(#FE330A, #fe8d2c);
@@ -43,6 +45,10 @@ html, body{
     background-color: #EFEAE3;
     position: relative;
     margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 4;
 }
 .page1 .nav{
     width: 100%;
@@ -101,14 +107,17 @@ html, body{
 
 .layout{
     width: 95%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     padding: 10px 20px;
     margin-bottom: 60px;
     flex-wrap: wrap;
+    padding: 4vw 1vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.379);
 }
+
 .layout .left{
     display: flex;
     width: 30%;
@@ -124,97 +133,81 @@ html, body{
 .layout .right h1{
     font-size: 10vw;
     font-weight: 700;
-
     line-height: 8vw;
     text-align: right;
 }
-.gola{
-    position: absolute;
-    width: 30%;
-    height: 30%;
-    background: #FE330A;
-    border-top-left-radius: 50%;
-    right: 0%;
-    top: 80vh;
-    filter: blur(20px);
-    animation-name: anime3;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-.gola2{
-    position: absolute;
-    width: 30%;
-    height: 30%;
-    background: #FE330A;
-    border-radius: 50%;
-    right: 5%;
-    top: 85vh;
-    filter: blur(20px);
-    animation-name: anime1;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-}
-.gola3{
-    position: absolute;
-    width: 30%;
-    height: 30%;
-    background: #FE330A;
-    border-radius: 50%;
-    right: 20%;
-    top: 70vh;
-    filter: blur(20px);
-    animation-name: anime2;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
 
-
-.page1 video{
-    width: 90%;
-    margin-left: 5%;
+.page1 video {
     position: relative;
-    border-radius: 15px;
-    margin-top: 70px;
+    border-radius: 30px;
+    margin-top: 4vw;
+    width: 95%;
 }
 
-.scroll::-webkit-scrollbar{
-    display: none;
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 85vh;
 }
 
+#hero-1 {
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero-3 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    position: absolute;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
 @keyframes anime1 {
-    from{
-        transform: translate(5%,15%);
+    from {
+        transform: translate(55%, -3%);
     }
-    to{
-        transform: translate(-30%,-15%);
+
+    to {
+        transform: translate(0%, 10%);
     }
 }
+
 @keyframes anime2 {
-    from{
-        transform: translate(5%,25%);
+    from {
+        transform: translate(5%, -5%);
+    }
 
+    to {
+        transform: translate(-20%, 30%);
     }
-    to{
-        transform: translate(0%,20%);
-    }        
-}
-@keyframes anime3 {
-    from{
-
-        transform: translate(0,-15%);
-    }
-    to{
-        transform: translate(-5,5%); 
-    }
-        
-    
 }
 .page2{
     width: 100%;
@@ -283,7 +276,7 @@ html, body{
     width: 60%;
     font-size: 4.4vw;
     font-weight: 600;
-    line-height: 65px;
+    line-height: 4vw;
     z-index: 9;
     letter-spacing: -2px;
 }
@@ -302,7 +295,7 @@ html, body{
     filter: blur(20px);
     background: linear-gradient(#FF7524,#FE330A);
     position: absolute;
-    top: 65vh;
+    top: 85vh;
     left: 24%;
     animation-name: movinggola;
     animation-duration: 3s;
@@ -361,8 +354,8 @@ html, body{
     border-radius: 10px;
     height: 500px;
     position: fixed;
-    top: 25vh;
-    right: 30%;
+    top: 15vh;
+    right: 20%;
     z-index: 100;
     background-position: center;
     background-size: cover;
@@ -389,12 +382,13 @@ html, body{
     width: 90%;
     background-color: black;
     border-radius: 10px;
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-    margin-top: 200px;
+    margin-bottom: 30px;
+    margin-top: 100px;
 }
 
 .page3 .design .left{
@@ -414,8 +408,8 @@ html, body{
 }
 
 .page3 .design .left .left-layout h1{
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 4vw;
+    line-height: 4vw;
     font-family: 'neu';
     display: inline-block;
     color: rgba(255, 255, 255, 0.3);
@@ -423,32 +417,266 @@ html, body{
 
 .page3 .design .left .left-layout p{
     font-family: 'neu';
-    margin-top: 30px;
-    font-size: 18px;
+    margin-top: 3vw;
+    font-size: 1.1vw;
     font-weight: 300;
+}
+
+.page3 .design .left .left-layout .h1s{
+    display: flex;
+    flex-direction: column;
 }
 
 .page3 .design .left .left-layout .h1s span{
     content: "";
     width: 1%;
-    height: 17%;
+    height: 4.5vw;
     backdrop-filter: blur(10px);
     position: absolute;
     left: -1%;
-    background-color: rgba(255, 255, 255, 0.204);
+    background-color: rgba(255, 255, 255, 0.371);
+    border: none;
 }
 
+#h1 span{
+    background-color: #FE330A;
+}
 
-
-
-
+.page3 .design .left .left-layout #h1{
+    color: white;
+}
 
 
 .page3 .design .right{
     width: 50%;
     position: relative;
+    margin-right: 2vw;
+    padding: 2vw 0;
 }
 .page3 .design .right img{
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
+}
+
+
+.page5{
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    z-index: 9;
+    color: #EFEAE3;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.footer h1{
+    font-size: 22vw;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.389);
+    display: inline-block;
+    
+    margin-right: 4vw;
+}
+.footer .foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1vw;
+    width: 100%;
+    height: 10%;
+}
+
+.footer .section{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 5vw;
+    z-index: 2;
+}
+.footer .section .sec1{
+    font-size: 2vw;
+}
+.footer .section .sec2{
+    font-size: 1.5vw;
+}
+
+.footer .section .sec2 input{
+    width: 22vw;
+    height: 3vw;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.303);
+    padding: 10px;
+    margin-top: 10px;
+    color: #EFEAE3;
+}
+
+.footer .ball1{
+    width: 100vw;
+    height: 35em;
+    background:#FE330A;
+    position: absolute;
+    top: -17em;
+    left: -25em;
+    filter: blur(20px);
+    border-bottom-right-radius: 30%;
+    animation-name: movingball1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    z-index: 1;
+}
+.footer .ball2{
+    width: 30%;
+    height: 50%;
+    background:#FE330A;
+    position: absolute;
+    top: -17em;
+    left: -19vh;
+    border-bottom-right-radius: 50%;
+    filter: blur(60px);
+    border-radius: 50%;
+    animation-name: movingball2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    z-index: 1;
+}
+.footer .ball3{
+    width: 80vw;
+    height: 40vw;
+    background:#FE330A;
+    position: absolute;
+    top: -20vw;
+    right: -30%;
+    filter: blur(20px);
+    rotate: 45deg;
+    border-radius: 999em;
+    animation-name: movingball3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    z-index: 1;
+    border-radius: 30%;
+}
+
+@keyframes movingball1 {
+    from{
+        transform: rotate(-5deg)
+    }
+    to{
+        transform: rotate(-20deg)
+    }
+}
+
+@keyframes movingball3{
+    from{
+        transform: rotate(-20deg) translateY(10%)
+    }
+    to{
+        transform: rotate(0deg) translateY(15%)
+    }
+}
+@keyframes movingball2 {
+    from{
+        rotate: 30deg;
+    }
+    to{
+        rotate: 20deg;
+    }
+}
+
+.page4{
+    width: 100%;
+    min-height: 50vh;
+    background-color: #EFEAE3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+  }
+
+  .swiper-slide {
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+    padding-left: 2vw;
+    margin-top: 5vw;
+    transition: all ease 0.5s;
+    transition: transform 0.3s ease;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 40%;
+    height: 20%;
+    object-fit: cover;
+    margin-top: -2vw;
+  }
+
+  .swiper-slide {
+    width: 30%;
+    background-color: #EFEAE3;
+    border-left: 1px solid rgba(0, 0, 0, 0.378);
+  }
+  .swiper-slide p{
+    width: 70%;
+  }
+
+.curser{
+    position: fixed;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background-color: #FE330A;
+    z-index: 99;
+    scale: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.curser span{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.curser span i{
+    font-size: 1.5vw;
+    color: white;
 }

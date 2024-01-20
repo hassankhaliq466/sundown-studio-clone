@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/Assets/favicon.ico" type="image/x-icon">
     
     <title>Sundown Studio</title>
 </head>
 <body>
+
     <div class="intro">
         <h1>ENVIRONMENTS</h1>
     </div>
@@ -40,13 +49,14 @@
 
             </div>
 
-            <div class="chacha">
-                <div class="gola"></div>
-                <div class="gola2"></div>
-                <div class="gola3"></div>               
+            <div id="hero-shape">
+                <div id="hero-1"></div>
+                <div id="hero-2"></div>
+                <div id="hero-3"></div>
             </div>
 
             <video autoplay loop muted src="/Assets/c72af10b.mp4"></video>
+            
         </div>
         <div class="page2">
 
@@ -100,7 +110,7 @@
                     <div class="overlay"></div>
                     <h1>NYFW Popup</h1>
                 </div>
-                <div class="cet" id="elem1" data-image="https://plus.unsplash.com/premium_photo-1672056403748-d687a87b16a1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <div class="cet" id="elem1" data-image="https://images.unsplash.com/photo-1682685797229-b2930538da47?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                     <div class="overlay"></div>
                     <h1>Play New Kidvision</h1>
                 </div>
@@ -119,32 +129,11 @@
                 <div class="left">
                     <div class="left-layout">
                         <div class="h1s">
-                            
-                            <h1 data-image="/Assets/64d3dd9edfb41666c35b15e1_Project-p-1080.webp" id="h1" onclick="changeBackgroundColor(this)"><span></span> Design
-                            
-                            
-                            </h1>
+                            <h1 data-image="/Assets/64d3dd9edfb41666c35b15e1_Project-p-1080.webp" id="h1"><span></span> Design
+                            <h1><span></span> Project</h1>
+                            <h1><span></span> Execution</h1>
                         </div>
-                        <div class="h1s">
-                            
-                            <h1 data-image="/Assets/64d3dd9edfb41666c35b15d0_Project.webp" id="h2" onclick="changeBackgroundColor(this)"> <span></span> Project</h1>
-                        </div>
-                        <div class="h1s">
-                            
-                            <h1 data-image="/Assets/64d3dd9edfb41666c35b15cd_Execution-p-1080.webp" id="h3" onclick="changeBackgroundColor(this)"><span></span> Execution</h1>
-                        </div>
-                        <div class="sec">
-                            
-                        </div>
-                        <!-- <div class="sec1">
-                            
-                            <p>Once we have a design, our production team takes the lead in bringing it to life. We manage all stages of the project, from build specifications and technical drawings to site surveys, vendor management, and 2D & 3D production. We have an extensive network of partners to meet each unique design and project need.</p>
-                        </div>
-                        <div class="sec2">
-                            
-                            <p>We’re with you every step of the way, from the project initiation to launch day. Our production and design teams are onsite to direct and guide the process down to the last point of completion, ensuring success across the built space and experience.</p>
-                        </div>
-                    -->
+                        <p>Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to 3D renderings.</p>
                     </div>
                 </div>
                 <div class="right">
@@ -153,8 +142,74 @@
 
             </div>
         </div>
+        <div class="page4">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="curser">
+                        <span>
+                            <i class="ri-arrow-left-s-line"></i>
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </div>
+                  <div class="swiper-slide">
+                    <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15ff_Nike.svg" alt="">
+                    <p>Retained Production support across retail and events in NY, CHI, LA. Creative Design, Design Management, Production/Project Management, and execution of work from concept to installation across the Country.</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1600_Converse.svg" alt="">
+                    <p>Creative Concepting, Design, Design Management, Project Management, and execution of work from concept to installation across the Country. Cross functional communication and management of third party partners.</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fd_Arc%E2%80%99teryx.svg" alt="">
+                    <p>Production and design along with install oversight and execution support for the SoHo store opening on Broadway St, New York. Also working on creative and production work for a new store opening in Glendale, California.</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fe_Hunter.svg" alt="">
+                    <p>Design and Production partner for Hunter Holiday 2022 Pop-in at Nordstrom 57th St, New York, including activations in Women’s, Men’s and Kid’s zones. Thirty-five (35) additional smaller take-downs in Nordstrom stores across the US. Concept design for Holiday boot customization events in stores across winter 2022.</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1601_MediaLink.svg" alt="">
+                    <p>Creative, Design, and Production Partner for 2023 CES. Scope Included creation of Branding Identity, Assets, and Digital Content, Design, Production design, Production oversight and Installation of client activations for IBM, Delta, Instacart, and more.</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1602_AfterPay.svg" alt="">
+                    <p>Creative, Design, and Production Partner for 2022 NY Fashion Week Pop-Up space. In Partnership with B-Reel scope including creation of Final Design, Design Assets, 3D Renders, Production design, Production/Partner oversight and creation of a two (2) story pop-up for Afterpay’s clients such as Crocs, JD Sports, Container Store, & Revolve.</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="page5">
+
+        </div>
     </div>
+
+    <div class="footer">
+        <div class="section">
+            <div class="sec1">
+                <p>Work</p>
+                <p>Studio</p>
+                <p>Contact</p>
+            </div>
+            <div class="sec2">
+                <p>Get industry insights and creative <br> inspiration straight to your inbox.</p>
+                <input type="email" placeholder="Email address">
+            </div>
+        </div>
+        <h1>Sundown</h1>
+        <div class="foot">
+            <p>Copyright © Sundown Studio</p>
+            <p><i class="ri-global-line"></i>Brooklyn, NY</p>
+            <p>Instagram</p>
+            <p>LinkedIn</p>
+        </div>
+        <div class="ball1"></div>
+        <div class="ball2"></div>
+        <div class="ball3"></div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/CSSRulePlugin.min.js" integrity="sha512-aUM9IHJr7TYwzhhbK0G9UQX6WNq6/1HC+lsh+EuqJyaOB44csmHMRVHcIVMWfrruvpVTtEqshD28L+0XxMH//g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/script.js"></script>
 </body>
