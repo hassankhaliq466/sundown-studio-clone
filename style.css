@@ -1,0 +1,454 @@
+@font-face {
+    font-family: 'neu';
+    src: url(./Assets/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'neu';
+}
+
+
+
+.intro{
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    color: lin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    font-size: 30px;
+    
+}
+.intro h1{
+    background: -webkit-linear-gradient(#FE330A, #fe8d2c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    margin-top: -30px;
+}
+.page1 .nav{
+    width: 100%;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page1 .nav img{
+    width: 11%;
+}
+.page1 .nav .navBtn{
+    display: flex;
+    gap: 10px;
+}
+.page1 .nav .navBtn h4{
+    padding: 11px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.232);
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.232);
+    font-weight: 100;
+}
+.page1 .nav .navBtn h4 a{
+    color: black;
+    z-index: 99;
+    text-decoration: none;
+    position: relative;
+    font-size: 17px;
+}
+.page1 .nav .navBtn h4::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    margin-top: 88px;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+.page1 .nav .navBtn h4:hover a{
+    color: white;
+}
+.page1 .nav .navBtn h4:hover::after{
+    margin-top: 0;
+    border-radius: 0;
+}
+
+
+
+
+.layout{
+    width: 95%;
+    height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+.layout .left{
+    display: flex;
+    width: 30%;
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 2vw;
+    align-items: end;
+    margin-left: 30px;
+}
+.layout .right{
+    width: 60%;
+}
+.layout .right h1{
+    font-size: 10vw;
+    font-weight: 700;
+
+    line-height: 8vw;
+    text-align: right;
+}
+.gola{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background: #FE330A;
+    border-top-left-radius: 50%;
+    right: 0%;
+    top: 80vh;
+    filter: blur(20px);
+    animation-name: anime3;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.gola2{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background: #FE330A;
+    border-radius: 50%;
+    right: 5%;
+    top: 85vh;
+    filter: blur(20px);
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.gola3{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background: #FE330A;
+    border-radius: 50%;
+    right: 20%;
+    top: 70vh;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+.page1 video{
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 70px;
+}
+
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+
+
+@keyframes anime1 {
+    from{
+        transform: translate(5%,15%);
+    }
+    to{
+        transform: translate(-30%,-15%);
+    }
+}
+@keyframes anime2 {
+    from{
+        transform: translate(5%,25%);
+
+    }
+    to{
+        transform: translate(0%,20%);
+    }        
+}
+@keyframes anime3 {
+    from{
+
+        transform: translate(0,-15%);
+    }
+    to{
+        transform: translate(-5,5%); 
+    }
+        
+    
+}
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #EFEAE3;
+    margin-top: -90px;
+}
+
+.page2 .moving-text{
+    display: flex;
+    margin-top: 5vw;
+    overflow-x: auto;
+    margin-top: 90px;
+
+}
+.moving-text::-webkit-scrollbar{
+    display: none;
+}
+.page2 .moving-text .row{
+    display: flex;
+    position: relative;
+    animation-name: moving;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.page2 .moving-text h1{
+    display: inline-block;
+    font-size: 9vw;
+    margin-top: 70px;
+}
+.page2 .moving-text .ball{
+    width: 5vw;
+    height: 5vw;
+    background-color: #FE330A;
+    border-radius: 50%;
+    margin: 7vw 2vw;
+}
+
+
+@keyframes moving {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+.center{
+    width: 100%;
+    padding: 3vw 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 260px;
+}
+
+.center .left{
+    width: 60%;
+    font-size: 4.4vw;
+    font-weight: 600;
+    line-height: 65px;
+    z-index: 9;
+    letter-spacing: -2px;
+}
+.center .right{
+    width: 20%;
+    margin-top: 130px;
+}
+.center .right img{
+    width: 95%;
+    border-radius: 15px;
+}
+.center .gollo{
+    width: 36vw;
+    height: 35vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: linear-gradient(#FF7524,#FE330A);
+    position: absolute;
+    top: 65vh;
+    left: 24%;
+    animation-name: movinggola;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes movinggola {
+    from{
+        transform: translate(10%,-10%) skew(5deg,0);
+    }
+    to{
+        transform: translate(-5%,5%) skew(0deg,-5deg);
+    }
+}
+
+
+.cetigory{
+    width: 100%;
+    overflow: hidden;
+}
+.cetigory .cet{
+    width: 100%;
+    height: 20%;
+    font-size: 1.8vw;
+    font-family: 'neu';
+    padding: 30px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.232);
+    overflow: hidden;
+    position: relative;
+
+}
+.cet h1{
+    position: relative;
+    z-index: 10;
+}
+
+.cetigory .cet .overlay{
+    width: 100%;
+    height: 100%;
+    background-color:#fe8d2c;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+
+.cetigory .cet:hover .overlay{
+    top: 0;
+}
+
+
+.fixed{
+    width: 400px;
+    border-radius: 10px;
+    height: 500px;
+    position: fixed;
+    top: 25vh;
+    right: 30%;
+    z-index: 100;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+.fixed .image{
+    width: 100%;
+}
+
+
+/* page 3 */
+
+.page3{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #EFEAE3;
+}
+
+.page3 .design{
+    width: 90%;
+    background-color: black;
+    border-radius: 10px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 200px;
+}
+
+.page3 .design .left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.page3 .design .left .left-layout{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+}
+
+.page3 .design .left .left-layout h1{
+    font-size: 70px;
+    line-height: 70px;
+    font-family: 'neu';
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.page3 .design .left .left-layout p{
+    font-family: 'neu';
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.page3 .design .left .left-layout .h1s span{
+    content: "";
+    width: 1%;
+    height: 17%;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: -1%;
+    background-color: rgba(255, 255, 255, 0.204);
+}
+
+
+
+
+
+
+
+.page3 .design .right{
+    width: 50%;
+    position: relative;
+}
+.page3 .design .right img{
+    width: 90%;
+    border-radius: 10px;
+}
