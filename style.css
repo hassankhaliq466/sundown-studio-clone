@@ -41,7 +41,7 @@ html, body{
 }
 .page1{
     width: 100%;
-    min-height: 100vh;
+    min-height: 160vh;
     background-color: #EFEAE3;
     position: relative;
     margin-top: -30px;
@@ -56,6 +56,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 4vw 4vw;
 }
 .page1 .nav img{
     width: 11%;
@@ -65,7 +66,7 @@ html, body{
     gap: 10px;
 }
 .page1 .nav .navBtn h4{
-    padding: 11px 25px;
+    padding: 1vw 2vw;
     border: 1px solid rgba(0, 0, 0, 0.232);
     border-radius: 30px;
     position: relative;
@@ -75,14 +76,14 @@ html, body{
     flex-direction: column;
     overflow: hidden;
     color: rgba(0, 0, 0, 0.232);
-    font-weight: 100;
+    font-weight: 800;
 }
 .page1 .nav .navBtn h4 a{
     color: black;
     z-index: 99;
     text-decoration: none;
     position: relative;
-    font-size: 17px;
+    font-size: 1.1vw;
 }
 .page1 .nav .navBtn h4::after{
     content: "";
@@ -90,7 +91,7 @@ html, body{
     height: 100%;
     position: absolute;
     background: black;
-    margin-top: 88px;
+    margin-top: 8vw;
     border-radius: 50%;
     transition: all ease 0.3s;
 }
@@ -107,15 +108,16 @@ html, body{
 
 .layout{
     width: 95%;
-    height: 80vh;
+    max-height: 80vh;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 0vw 4vw;
     margin-bottom: 60px;
     flex-wrap: wrap;
     padding: 4vw 1vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.379);
+    padding-top: 12vw;
 }
 
 .layout .left{
@@ -149,7 +151,7 @@ html, body{
     width: 46vw;
     height: 36vw;
     right: 0;
-    top: 85vh;
+    top: 45vw;
 }
 
 #hero-1 {
@@ -222,7 +224,8 @@ html, body{
     margin-top: 5vw;
     overflow-x: auto;
     margin-top: 90px;
-
+    position: relative;
+    
 }
 .moving-text::-webkit-scrollbar{
     display: none;
@@ -234,6 +237,8 @@ html, body{
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    align-items: center;
+    justify-content: center;
 }
 
 .page2 .moving-text h1{
@@ -246,7 +251,9 @@ html, body{
     height: 5vw;
     background-color: #FE330A;
     border-radius: 50%;
-    margin: 7vw 2vw;
+    display: flex;
+    margin: 0vw 2vw;
+    margin-top: 5vw;
 }
 
 
@@ -260,32 +267,31 @@ html, body{
 }
 
 
-
-
 .center{
     width: 100%;
-    padding: 3vw 5vw;
+    padding: 10vw 5vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 260px;
+    margin-bottom: 3vw;
 }
 
 .center .left{
     width: 60%;
     font-size: 4.4vw;
     font-weight: 600;
-    line-height: 4vw;
+    line-height: 4.5vw;
     z-index: 9;
     letter-spacing: -2px;
 }
 .center .right{
     width: 20%;
     margin-top: 130px;
+    font-size: 1.2vw;
 }
 .center .right img{
-    width: 95%;
+    width: 100%;
     border-radius: 15px;
 }
 .center .gollo{
@@ -295,7 +301,7 @@ html, body{
     filter: blur(20px);
     background: linear-gradient(#FF7524,#FE330A);
     position: absolute;
-    top: 85vh;
+    top: 40vh;
     left: 24%;
     animation-name: movinggola;
     animation-duration: 3s;
@@ -323,7 +329,7 @@ html, body{
     height: 20%;
     font-size: 1.8vw;
     font-family: 'neu';
-    padding: 30px 30px;
+    padding: 3vw 3vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.232);
     overflow: hidden;
     position: relative;
@@ -346,6 +352,12 @@ html, body{
 
 .cetigory .cet:hover .overlay{
     top: 0;
+}
+.cetigory .cet img{
+    display: none;
+}
+.cetigory .cet video{
+    display: none;
 }
 
 
@@ -370,7 +382,7 @@ html, body{
 
 .page3{
     width: 100%;
-    min-height: 100vh;
+    max-height: 140vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -379,16 +391,16 @@ html, body{
 }
 
 .page3 .design{
-    width: 90%;
+    width: 90vw;
     background-color: black;
     border-radius: 10px;
-    min-height: 100vh;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-    margin-bottom: 30px;
-    margin-top: 100px;
+    margin-bottom: 3vw;
+    margin-top: 10vw;
 }
 
 .page3 .design .left{
@@ -399,7 +411,7 @@ html, body{
     flex-direction: column;
 }
 .page3 .design .left .left-layout{
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -451,7 +463,7 @@ html, body{
     width: 50%;
     position: relative;
     margin-right: 2vw;
-    padding: 2vw 0;
+    padding: 2vw 0vw;
 }
 .page3 .design .right img{
     width: 100%;
@@ -543,12 +555,11 @@ html, body{
     height: 30vw;
     background:#FE330A;
     position: absolute;
-    top: -17em;
+    top: -14vw;
     left: 5vw;
     filter: blur(20px);
-    border-radius: 50%;
     animation-name: movingball2;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
@@ -591,7 +602,12 @@ html, body{
     }
 }
 @keyframes movingball2 {
-    
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 20deg;
+    }
 }
 
 .page4{
@@ -602,7 +618,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1vw 0;
+    padding: 0vw 2vw;
 }
 
 .swiper {
@@ -615,10 +631,10 @@ html, body{
   }
 
   .swiper-slide {
-    width: 40%;
+    width: 20vw;
     height: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.1vw;
     background: #fff;
     display: flex;
     align-items: start;
@@ -641,9 +657,10 @@ html, body{
   }
 
   .swiper-slide {
-    width: 30%;
+    width: 30vw;
     background-color: #EFEAE3;
     border-left: 1px solid rgba(0, 0, 0, 0.378);
+    margin-bottom: 3vw;
   }
   .swiper-slide p{
     width: 70%;
@@ -651,6 +668,8 @@ html, body{
 
 .curser{
     position: fixed;
+    left: 0%;
+    top: 30%;
     width: 7vw;
     height: 7vw;
     border-radius: 50%;
@@ -673,4 +692,127 @@ html, body{
 .curser span i{
     font-size: 1.5vw;
     color: white;
+}
+
+
+/* Responsive */
+
+.menu{
+    padding: 1vw 4vw;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.33);
+    color: black;
+    background: transparent;
+    display: none;
+}
+
+@media (max-width:600px) {
+
+    .menu{
+        display: block;
+    }
+
+    .page1 .nav .navBtn h4{
+        display: none;
+    }
+    .page1 .nav {
+        padding: 8vw 5vw;
+    }
+    .page1 .nav img{
+        width: 13vw;
+    }
+
+    #hero-shape{
+        top: 55vw;
+    }
+    .page2 .moving-text .ball{
+        margin-top: 12vw;
+    }
+
+    .center{
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .center .left{
+        width: 100%;
+        font-size: 4.4vw;
+        font-weight: 600;
+        line-height: 4.5vw;
+        z-index: 9;
+        letter-spacing: 0px;
+    }
+    .center .right{
+        width: 30%;
+        margin-top: 50px;
+        z-index: 4;
+        font-size: 1.5vw;
+    }
+    .center .right img{
+        width: 95%;
+        border-radius: 15px;
+    }
+    .center .gollo{
+        width: 40vw;
+        height: 40vw;
+        z-index: 3;
+        position: absolute;
+        top: 60vh;
+        left: 30%;
+    }
+
+
+
+    .cetigory{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+    }
+    .cetigory .cet{
+        width: 40%;
+        height: 60%;
+        font-size: 1.8vw;
+        font-family: 'neu';
+        border-bottom: none;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cetigory .cet .overlay{
+        display: none;
+    }
+    
+    
+    .cetigory .cet img{
+        display: block;
+        width: 100%;
+    }
+    .cetigory .cet video{
+        display: block;
+        width: 100%;
+    }
+    .fixed{
+        display: none;
+    }
+
+    .page3 .design{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        min-height: 100vh;
+    }
+    .page3 .design .right{
+        width: 50%;
+    }
+    .page3 .design .right img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
